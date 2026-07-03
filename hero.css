@@ -1,0 +1,101 @@
+/* ── Reset ────────────────────────────────────── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #121314;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ── 3D Canvas ────────────────────────────────── */
+.hero__canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+
+.hero__canvas spline-viewer {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ── Spline Watermark Patch ────────────────────── */
+.hero__watermark-patch {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 160px;
+  height: 50px;
+  background: linear-gradient(135deg, #e8e8e8, #d4d4d4);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* ── Apple-Style Glassmorphism Nav ─────────────── */
+.nav {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50px;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.nav__link {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  padding: 10px 20px;
+  border-radius: 40px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+}
+
+.nav__link:hover {
+  color: #00F2FF;
+  background: rgba(0, 242, 255, 0.08);
+  text-shadow: 0 0 12px rgba(0, 242, 255, 0.4);
+}
+
+.nav__link:active {
+  transform: scale(0.96);
+}
+
+/* ── Responsive ───────────────────────────────── */
+@media (max-width: 600px) {
+  .nav {
+    bottom: 20px;
+    gap: 4px;
+    padding: 6px 8px;
+  }
+
+  .nav__link {
+    font-size: 11px;
+    padding: 8px 14px;
+    letter-spacing: 0.2px;
+  }
+}

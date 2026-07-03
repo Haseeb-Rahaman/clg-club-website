@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robotics Club | Landing Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="hero.css">
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.98/build/spline-viewer.js"></script>
+</head>
+<body>
+
+  <!-- Full-screen 3D Canvas -->
+  <div class="hero__canvas">
+    <spline-viewer
+      id="spline-viewer"
+      url="https://prod.spline.design/y-HcYAofvK64TgfU/scene.splinecode"
+    ></spline-viewer>
+  </div>
+
+  <!-- Hide Spline watermark -->
+  <div class="hero__watermark-patch"></div>
+
+  <!-- Apple-Style Bottom Navigation -->
+  <nav class="nav">
+    <a class="nav__link" href="#home">Home</a>
+    <a class="nav__link" href="#about">About Us</a>
+    <a class="nav__link" href="#projects">Projects</a>
+    <a class="nav__link" href="#contact">Contact</a>
+  </nav>
+
+  <script src="hero.js"></script>
+
+</body>
+</html>
